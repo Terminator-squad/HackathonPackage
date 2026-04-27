@@ -89,3 +89,28 @@ button:active{
     color: white;
     text-decoration: underline;
 }
+.time-setup { 
+    margin-bottom: 20px; 
+}
+.presets {
+    display: flex; gap: 8px; justify-content: center; margin-top: 10px; 
+}
+.preset {
+     padding: 8px 16px; font-size: 1rem; background-color: #4b5563; 
+    }
+#minutesInput {
+     font-size: 1.2rem; padding: 6px; width: 80px; text-align: center; border-radius: 6px; border: none; 
+    }
+
+.streak {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255,255,255,0.1);
+    color: #f9fafb;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    user-select: none;
+}
