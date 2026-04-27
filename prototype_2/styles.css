@@ -14,13 +14,14 @@ body {
     align-items: center;
 }
 
+
 .card {
     background-color: #312e81;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width:500px; 
+    max-width: 550px;
     text-align: center;
 }
 
@@ -128,6 +129,58 @@ li {
     font-weight: bold;
 }
 
+/* .navigation1 {
+    color: #4ade80;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px; border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+.navigation2 {
+    color: #4ade80;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px; border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+
+} */
+
+.nav-link1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #a5b4fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-link1:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-link2 {
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    color: #a5b4fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-link2:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -135,7 +188,7 @@ li {
     50% {
         transform: translateY(-10px);
     }
-}
-#winner {
+}   
+#winner{
     animation: bounce 1s infinite;
 }
