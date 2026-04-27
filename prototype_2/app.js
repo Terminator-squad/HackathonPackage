@@ -10,6 +10,7 @@ const taskList = document.getElementById('taskList');
 const resultBox = document.getElementById('resultBox');
 const winnerDisplay = document.getElementById('winner');
 
+const tickSound = new Audio('https://www.soundjay.com/buttons_c2026/sounds/button-2.mp3');
 
 window.onload = function() {
     let storedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -70,12 +71,15 @@ function pickRandomTask() {
     document.getElementById('goToFocusTimer').classList.add('hidden');
 
     let spinCount = 0;
+    tickSound.play();
 
     let spinInterval = setInterval(() => {
         let randomIndex = Math.floor(Math.random() * tasks.length);
         winnerDisplay.textContent = tasks[randomIndex];
+        finalTask = tasks[randomIndex];
         winnerDisplay.className = "spinning-text";
         spinCount++;
+
         if (spinCount >= 20) {
             clearInterval(spinInterval);
             finalTask = tasks[randomIndex];
@@ -90,6 +94,14 @@ function goToFocusTimer() {
     localStorage.setItem('selectedTask', finalTask);
     window.location.href = '../prototype_1/index.html';
 }
+
+
+// Allow pressing Enter to add task
+taskInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        addTask();
+    }
+});
 
 addTaskBtn.addEventListener('click', addTask);
 addTaskBtn.addEventListener('click', storeTasks);
