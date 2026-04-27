@@ -17,7 +17,6 @@ function setStudyAlarm() {
     subject = subjectInput.value.trim();
     agenda = agendaInput.value.trim();
     scheduleTime = timeInput.value; // Expecting format "HH:MM"
-
     if(!subject || !scheduleTime) {
         alert("Please enter both subject and time for the alarm."); //This allows the user to set an alarm without an agenda, but requires both subject and time.
         return;
@@ -25,7 +24,6 @@ function setStudyAlarm() {
 
     document.getElementById("statusMessage").classList.remove('hidden');
     document.getElementById("statusMessage").textContent = `Alarm set for ${subject} at ${scheduleTime}`;
-    
     clockInterval = setInterval(checkTime, 1000);
 }
 function checkTime() {
@@ -48,7 +46,7 @@ function triggerAlarm() {
 }
 
 function startSession() {
-    currentStudyTask = `${subject}${agenda ? " - " + agenda : ""}`;
+    currentStudyTask = `${subject}${agenda ? " - " + agenda : ""}`;// This creates a string that combines the subject and agenda, if the agenda is provided. If not, it just uses the subject.
     localStorage.setItem('selectedTask', currentStudyTask);
     window.location.href = '../prototype_1/index.html';
 }
