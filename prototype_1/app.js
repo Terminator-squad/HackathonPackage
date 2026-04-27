@@ -2,6 +2,7 @@ let remainingTime = 25 * 60; // Time in seconds
 let timerID = null;
 let isRunning = false;
 // comment to test git branch
+// second comment to test git branch
 const startButton  = document.getElementById('start');
 const pauseButton  = document.getElementById('pause');
 const resetButton  = document.getElementById('reset');
