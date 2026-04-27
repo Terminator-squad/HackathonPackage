@@ -1,0 +1,91 @@
+/* global styles for the prototype */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #111827;
+    color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+body.busted{
+    background-color: #b91c1c;
+}
+
+.container{
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.task-highlight { 
+    color: #4ade80;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px; border-radius: 20px;
+    display: inline-block;
+}
+
+#message{
+    color: #9ca3af;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#display{
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: monospace;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+button{
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.1s, opacity 0.2s;
+}
+button:hover{
+    opacity: 0.8;
+}
+button:active{
+    transform: scale(0.95);
+}
+#start{
+    background-color: #22c55e;
+}
+#reset{
+    background-color: #eab308;
+}
+#pause{
+    background-color: #4b5563;
+}
+.back-link { 
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #a5b4fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back-link:hover { 
+    color: white;
+    text-decoration: underline;
+}
