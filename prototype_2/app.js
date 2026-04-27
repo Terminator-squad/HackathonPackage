@@ -1,4 +1,4 @@
-let tasks = [];
+let tasks = []; // Empty Array to hold tasks
 let finalTask = "";
 
 const taskInput = document.getElementById('taskInput');
