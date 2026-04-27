@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1b4b;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #312e81;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    color: #a5b4fc;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-area button{
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+li {
+    background-color: #3730a3;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#spinBtn {
+    width: 100%;
+    background: linear-gradient(to right, #ec4899, #a855f7);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#spinBtn:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+.result-title {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 2px;;
+}
+
+#winner {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.winner-text {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.spinning-text {
+    color: #9ca3af
+}
+
+#goToFocusTimer {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
