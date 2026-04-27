@@ -16,6 +16,15 @@
 
         <input type="time" id="timeInput">
 
+        <!-- Theme switching is handled by applyTheme() and loadTheme() functions in app.js -->
+        <div class="theme-settings">
+            <label for="themeSelect">Theme:</label>
+            <select id="themeSelect">
+                <option value="dark">Dark Mode</option>
+                <option value="light">Light Mode</option>
+            </select>
+        </div>
+
         <button id="setAlarmBtn">Set Alarm</button>
         <p id="statusMessage" class="hidden status">Waiting for time...</p>
     </div>
@@ -28,6 +37,19 @@
             <h3>Today's Agenda:</h3>
             <p id="displayAgenda">Agenda details will appear here.</p>
         </div>
+        <!-- Snooze functionality is handled by the snooze() function in app.js -->
+        <div class="snooze-options">
+            <label for="snoozeDuration">Snooze for:</label>
+            <select id="snoozeDuration">
+                <option value="5">5 minutes</option>
+                <option value="10" selected>10 minutes</option>
+                <option value="15">15 minutes</option>
+                <option value="20">20 minutes</option>
+                <option value="25">25 minutes</option>
+                <option value="30">30 minutes</option>
+            </select>
+        </div>
+        <button id="snoozeBtn">Snooze</button>
         <button id="goToTimerBtn" class="hidden">Start Focus Timer</button>
     </div>
     <script src="app.js"></script>
