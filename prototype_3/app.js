@@ -12,6 +12,7 @@ const displayAgenda = document.getElementById('displayAgenda');
 const setupScreen = document.getElementById('setupScreen');
 const alarmScreen = document.getElementById('alarmScreen');
 const goToTimerBtn = document.getElementById('goToTimerBtn');
+const snoozeBtn = document.getElementById('snoozeBtn');
 
 function setStudyAlarm() {
     subject = subjectInput.value.trim();
@@ -43,6 +44,23 @@ function triggerAlarm() {
     setupScreen.classList.add('hidden');
     alarmScreen.classList.remove('hidden');
     goToTimerBtn.classList.remove('hidden');
+    snoozeBtn.classList.remove('hidden');
+}
+
+function snoozeAlarm() {
+    // Add 5 minutes to current time
+    let now = new Date();
+    now.setMinutes(now.getMinutes() + 5);
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    scheduleTime = `${hours}:${minutes}`;
+snoozeBtn.addEventListener('click', snoozeAlarm);
+    
+    // Hide alarm screen and restart timer
+    alarmScreen.classList.add('hidden');
+    snoozeBtn.classList.add('hidden');
+    goToTimerBtn.classList.add('hidden');
+    clockInterval = setInterval(checkTime, 1000);
 }
 
 function startSession() {
