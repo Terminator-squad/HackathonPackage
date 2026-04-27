@@ -20,7 +20,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;
+    max-width:500px; 
     text-align: center;
 }
 
@@ -126,4 +126,16 @@ li {
     padding: 0px 20px;
     cursor: pointer;
     font-weight: bold;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+#winner {
+    animation: bounce 1s infinite;
 }

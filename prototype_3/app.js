@@ -17,15 +17,13 @@ function setStudyAlarm() {
     subject = subjectInput.value.trim();
     agenda = agendaInput.value.trim();
     scheduleTime = timeInput.value; // Expecting format "HH:MM"
-
     if(!subject || !scheduleTime) {
-        alert("Please enter both subject and time for the alarm.");
+        alert("Please enter both subject and time for the alarm."); //This allows the user to set an alarm without an agenda, but requires both subject and time.
         return;
     }
 
     document.getElementById("statusMessage").classList.remove('hidden');
     document.getElementById("statusMessage").textContent = `Alarm set for ${subject} at ${scheduleTime}`;
-    
     clockInterval = setInterval(checkTime, 1000);
 }
 function checkTime() {
@@ -39,7 +37,7 @@ function checkTime() {
 }
 
 function triggerAlarm() {
-    clearInterval(clockInterval);
+    clearInterval(clockInterval);// Stop checking the time once the alarm is triggered
     displaySubject.textContent = subject;
     displayAgenda.textContent = agenda ? `Agenda: ${agenda}` : '';
     setupScreen.classList.add('hidden');
@@ -48,10 +46,10 @@ function triggerAlarm() {
 }
 
 function startSession() {
-    currentStudyTask = `${subject}${agenda ? " - " + agenda : ""}`;
-    localStorage.setItem('selectedTask', currentStudyTask);
+    currentStudyTask = `${subject}${agenda ? " - " + agenda : ""}`;// This creates a string that combines the subject and agenda, if the agenda is provided. If not, it just uses the subject.
+    localStorage.setItem('selectedTask', currentStudyTask);// This saves the current study task to local storage, which can be accessed by the timer page to display the task being focused on.
     window.location.href = '../prototype_1/index.html';
 }
 
 document.getElementById('setAlarmBtn').addEventListener('click', setStudyAlarm);
-goToTimerBtn.addEventListener('click', startSession);
+goToTimerBtn.addEventListener('click', startSession);// This event listener is added to the "Start Focus Timer" button, which will trigger the startSession function when clicked.
