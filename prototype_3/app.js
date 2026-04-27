@@ -19,7 +19,7 @@ function setStudyAlarm() {
     scheduleTime = timeInput.value; // Expecting format "HH:MM"
 
     if(!subject || !scheduleTime) {
-        alert("Please enter both subject and time for the alarm.");
+        alert("Please enter both subject and time for the alarm."); //This allows the user to set an alarm without an agenda, but requires both subject and time.
         return;
     }
 
